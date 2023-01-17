@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modern</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li>
+                <button>Home</button>
+
+            </li>
+            <li>
+                <button>Profile</button>
+                <div class="dropdown-content">
+                    <a href="#">Link D</a>
+                    <a href="#">Link E</a>
+                </div>
+            </li>
+            <li>
+                <button>Settings</button>
+                <div class="dropdown-content">
+                    <a href="#">Link G</a>
+                    <a href="#">Link H</a>
+                    <a href="#">Link I</a>
+                </div>
+            </li>
+            <li>
+                <button>Logout</button>
+                <div class="dropdown-content">
+                    <a href="#">Link J</a>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+    <section id="login-container">
+
+        <section id="panel1" class="panels"></section>
+
+        <section id="panel2" class="panels">
+            <p>Lorem <span>ipsum</span> dolor sit, amet <span>consectetur</span>adipisicing elit. Commodi tenetur dolores atque mollitia illo facilis vitae. Quis <span>provident</span>cupiditate nisi blanditiis corporis cumque dolorum laborum , <span>consectetur</span>similique velit! Obcaecati, aliquam?</p>
+            <p>Lorem ipsum <span>dolor</span> sit <span>amet</span> consectetur adipisicing <span> elit.</span> Perferendis veritatis voluptatum libero <span>corporis</span>, fugit sequi non enim animi delectus <span>temporibus</span> mollitia officiis ea totam <span>quibusdam</span>necessitatibus, reiciendis facere adipisci esse?</p>
+        </section>
+
+        <section id="panel3" class="panels">
+
+            <h2>Login</h2>
+            <p id="sign-up">Don't have an account? <a href="#">Sign up</a>.</p>
+            <form method="#">
+
+                <div class="input-label-container">
+                    <label for="email">Email: </label>
+                    <input id="email" type="email" name="email" value="">
+                </div>
+
+                <div class="input-label-container">
+                    <label for="password">Password: </label>
+                    <input id="password" type="password" name="password" value="">
+                </div>
+
+                <p id="login-error-msg"></p>
+
+                <input id="submit" type="button" value="Login!" >
+            </form>
+
+            <div id="T-Cs">
+                <p>Read our Terms and Conditions <a href="#">Here</a>.</p>
+            </div>
+
+        </section>
+
+    </section>
+
+    <section id="login-content-container">
+        <h2>Welcome.</h2>
+
+        <section id="layer1" class="layers">
+
+            <section id="profile-panel">
+                <div class="border">
+                    <h3 id="profile-header">Logan's Profile</h3>
+                    <div id="profile-content">
+                        <img id="pfp" src="pfp.jpg" alt="pfp">
+                        <div id="description">
+                            <p>Name : Logan Baxter</p>
+                            <p>Age : 17</p>
+                            <p>From : Lerwick, Shetland</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="qualifications">
+                    <h3 id="qualifications-header">S5 Highers:</h3>
+
+                    <div id="maths" class="subject-container">
+                        <p class="subject">Maths</p>
+                        <p class="grade">A</p>
+                    </div>
+
+                    <div id="computer-science" class="subject-container">
+                        <p class="subject">Computer Science</p>
+                        <p class="grade">A</p>
+                    </div>
+
+                    <div id="physical-education" class="subject-container">
+                        <p class="subject">Pyhsical Education</p>
+                        <p class="grade">A</p>
+                    </div>
+
+                    <div id="business-managment" class="subject-container">
+                        <p class="subject">Business Managment</p>
+                        <p class="grade">A</p>
+                    </div>
+
+                    <div id="english" class="subject-container">
+                        <p class="subject">Engish</p>
+                        <p class="grade">B</p>
+                    </div>
+
+                </div>
+            </section>
+        
+            <section id="football-panel">
+                <img id="fb1" src="fb1.jpg" alt="fb1">
+                <img id="fb2" src="fb2.jpg" alt="fb2">
+                <img id="fb3" src="fb4.jpg" alt="fb3">
+            </section>
+    
+    </section>
+
+    <section id="layer2" class="layers">
+
+        <section id="programming">
+            <h3>Programming</h3>
+            <div id="h"></div>
+            <div id="v"></div>
+        </section>
+
+    </section>
+
+
+
+    <script>
+        var submit_button = document.getElementById("submit");
+        submit_button.addEventListener("click", login_values);
+    </script>
+
+</body>
+</html>
