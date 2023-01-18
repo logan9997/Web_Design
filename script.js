@@ -26,8 +26,9 @@ function login_values() {
 }
 
 window.onload = function() {
+    const left_gap = 5.5;
     const layers = 6;
-    const layer_images = 8;
+    const layer_images = 10;
     const images = [
         "int.jpg", "def.jpg", "return.jpg", "true.jpg",
         "else.jpg", "zip.jpg", "async.jpg", "while.jpg",
@@ -47,7 +48,10 @@ window.onload = function() {
             var img_index = Math.floor(Math.random() * (images.length - 1)) ;
             
             //set image
-            img.src = images[img_index];   
+            img.src = images[img_index];  
+            
+            //random positioning variance
+            var position_variance = Math.floor(Math.random() * 2)
 
             //set random postion
             var top = (i+1) * 4; 
@@ -60,15 +64,19 @@ window.onload = function() {
             }
 
             //flip arch to other side of the page
-            if (x+1 < (layers / 2)+1) {
-                left *= -1
+            if (x+1 <= layers / 2) {
+                left = (x+1) * left_gap - left
+            } else {
+                left = 100 - (x+1 - (layers / 2)) * left_gap + left
             }
 
-            left += (x+1)*1
+            //apply random position variance 
+            left += position_variance
+            top += position_variance
 
             //apply positioning to image
             img.style.top = `${top}rem`;
-            img.style.left = `${left}rem`;
+            img.style.left = `calc(${left}% - 1.5rem)`
             
         }
     }
